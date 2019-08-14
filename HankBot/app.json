@@ -1,6 +1,10 @@
 {
   "name": "HankBot",
   "displayName": "HankBot",
+  "packagerOpts": {
+    "projectRoots": "",
+    "config": "rn-cli.config.js"
+  },
   "expo": {
     "name": "HankBot",
     "slug": "expo-template-bare",
