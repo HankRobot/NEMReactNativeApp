@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import "nem2-sdk";
+import "console";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -14,6 +15,7 @@ export default class App extends Component {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <Button onPress={aggregate} title="Learn More" color="#841584" accessibilityLabel="Learn more about this purple button" />
       </View>
     );
   }
@@ -37,3 +39,24 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+function aggregate() {
+  alert("Hello!");
+}
+/*
+function checkvalidity(hashstring)
+{
+    const request = require('request');
+    var url = node + '/transaction/' + hashstring + '/status';
+    console.log(url);
+    request(url, function (error, response, body) {
+        const user = JSON.parse(body);
+        if ( (response && response.statusCode) == 200 || user["status"] == "Success") {
+            console.log("Transaction Success!");
+        }
+        else{
+            console.log("Transaction failed");
+        }
+    });
+}
+*/
